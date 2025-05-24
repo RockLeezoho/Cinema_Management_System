@@ -1,0 +1,23 @@
+[
+    {
+        "voucher_id": "VC1329L1",
+        "start_time": "12:00, 12/03/2025",
+        "end_time": "12:00, 12/04/2025",
+        "condition": "Áp dụng cho khách hàng mới",
+        "description": "Giảm 50% tất cả các vé và dịch vụ khác"
+    },
+    {
+        "voucher_id": "VC1349L2",
+        "start_time": "12:00, 26/05/2025",
+        "end_time": "12:00, 18/09/2025",
+        "condition": "Áp dụng cho học sinh/sinh viên",
+        "description": "Giảm 20% tất cả các vé và dịch vụ khác"
+    },
+    {
+        "voucher_id": "VC459L1",
+        "start_time": "12:00, 02/08/2025",
+        "end_time": "12:00, 15/10/2025",
+        "condition": "Áp dụng cho người lớn tuổi",
+        "description": "Giảm 75% tất cả các vé và dịch vụ khác"
+    }
+]

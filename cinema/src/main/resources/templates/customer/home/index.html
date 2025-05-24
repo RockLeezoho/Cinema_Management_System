@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cinpenut - Hệ thống rạp chiếu phim tốt nhất Việt Nam</title>
+  <link rel="stylesheet" href="../bootstrap-5.3.3/css/bootstrap.css" />
+  <link rel="stylesheet" href="../bootstrap-5.3.3/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header--first">
+    <div class="header-wrapper">
+
+      <!-- Top Header -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark top-nav d-lg-flex">
+        <div class="container-fluid d-flex justify-content-between top__header">
+
+          <!--Desktop header-->
+          <!-- Logo -->
+          <a class="navbar-brand" href="#">
+            <img src="../icons/logo_cinema.png" alt="Cinema logo" height="120">
+          </a>
+          <div class="d-flex">
+            <button class="btn mx-1 equal-btn d-none d-lg-flex">
+              <a class="nav-link book__now" href="index.html">
+                <img src="../icons/ticket.png" alt="Ticket" height="25"> Đặt vé ngay</a>
+            </button>
+            <button class="btn mx-1 equal-btn d-none d-lg-flex">
+              <a class="nav-link" href="#">
+                <img src="../icons/pop-corn.png" alt="Pop-corn" height="25"> Đặt đồ ăn</a>
+            </button>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="group-search-menu">
+            <div class="input-group search-bar d-none d-lg-flex">
+              <input type="search" class="form-control" placeholder="Tìm phim, rạp">
+              <button class="btn btn-primary">
+                <i class="bi bi-search" style="color:black"></i>
+              </button>
+            </div>
+            <div iv class="user-menu d-none d-lg-flex">
+              <a href="../regis_login/regisLogin.html" class="nav-link person-circle d-flex">
+                <i class="bi bi-person-circle" style="font-size:24px;"></i>
+                <span>Đăng nhập</span>
+              </a>
+              <div class="language-selector">
+                <div class="d-flex align-items-center vi-desktop">
+                  <img id="flag-icon" src="../icons/vi.png" alt="Vietnamese" height="20">
+                  <span id="language-text" class="ms-2">VN</span>
+                  <i class="bi bi-caret-down-fill ms-2"></i>
+                </div>
+                <div class="dropdown-menu">
+                  <div class="dropdown-item" onclick="changeLanguage('en')">
+                    <img src="../icons/en.png" alt="English" height="20"> ENG
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Mobile header-->
+          <div class="mobile-header d-lg-none d-flex align-items-center ms-auto">
+            <!--Mobile search-->
+            <div class="input-group mobile-search me-2">
+              <input type="search" class="form-control" placeholder="Tìm phim, rạp">
+              <button class="btn btn-primary">
+                <i class="bi bi-search" style="color:black"></i>
+              </button>
+            </div>
+          </div>
+
+          <!--Hamburger menu button-->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Main Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark main-nav d-none d-lg-flex">
+        <div class="container-fluid d-flex justify-content-between bottom__header">
+          <!-- Desktop Menu -->
+          <ul class="navbar-nav nav-group-fi">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-geo-alt-fill"></i>
+                Chọn rạp
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="bi bi-geo-alt-fill"></i>
+                Chọn lịch chiếu
+              </a>
+            </li>
+          </ul>
+          <ul class="navbar-nav nav-group-se">
+            <li class="nav-item">
+              <a class="nav-link" href="../voucher/voucher.html">Khuyến mại</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop quà tặng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Giới thiệu</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Mobile Menu -->
+      <div class="collapse navbar-collapse" id="mobileMenu">
+        <!-- Mobile Navigation -->
+        <ul class="navbar-nav d-lg-none d-flex flex-column gap-1">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trang chủ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chọn rạp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Chọn lịch chiếu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../voucher/voucher.html">Khuyến mại</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Liên hệ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Đăng nhập</a>
+          </li>
+          <li class="nav-item lg-action">
+            <div class="language-selector">
+              <div class="vi-lan d-flex">
+                <a class="nav-link nav-vi" href="#">Ngôn ngữ: </a>
+                <div class="d-flex align-items-center vi-group">
+                  <img id="flag-icon" src="../icons/vi.png" alt="Vietnamese" height="20">
+                  <span id="language-text" class="ms-2">VN</span>
+                  <i class="bi bi-caret-down-fill ms-2"></i>
+                </div>
+              </div>
+              <div class="dropdown-menu">
+                <div class="dropdown-item" onclick="changeLanguage('en')">
+                  <img src="../icons/en.png" alt="English" height="20"> ENG
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <!--Main-->
+  <main>
+    <!--Banner slider-->
+    <div id="bannerCarousel" class="carousel slide banner__slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../../../../../../images/anh_khong_dau.jpg" class="d-block img-fluid slide__banner1" alt="Anh_Khong_Dau">
+        </div>
+        <div class="carousel-item">
+          <img src="../../../../../../images/dark_nuns.png" class="d-block img-fluid slide__banner2" alt="Dark_nuns">
+        </div>
+      </div>
+      <button class="carousel-control-prev banner__control" type="button" data-bs-target="#bannerCarousel"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <!-- <span class="visually-hidden">Previous</span> -->
+      </button>
+      <button class="carousel-control-next banner__control" type="button" data-bs-target="#bannerCarousel"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <!-- <span class="visually-hidden">Next</span> -->
+      </button>
+      <!-- <div class="btn-group"> -->
+      <button type="button" class="btn btn-warning btn-book__now" id="bookButton">
+        <a href="../book_tickets/bookTickets.html" class="btn book__now">ĐẶT VÉ NGAY</a>
+      </button>
+      <!-- </div> -->
+    </div>
+
+    <!--Quick Book--Dropdown-->
+    <div class="container mt-4 quick__book">
+      <div class="container__header">
+        <h3 class="header__booking">ĐẶT VÉ NHANH</h3>
+      </div>
+      <div class="row g-2 align-items-center group-quick__book">
+        <div class="col-lg-3 dropdown">
+          <select class="form-select" id="cinemaSelect" onchange="updateMovies()">
+            <option selected disabled>Chọn rạp</option>
+          </select>
+        </div>
+        <div class="col-lg-3 dropdown">
+          <select class="form-select" id="movieSelect" onchange="updateDates()" disabled>
+            <option selected disabled>Chọn phim</option>
+          </select>
+        </div>
+        <div class="col-lg-3 dropdown">
+          <select class="form-select" id="dateSelect" onchange="updateTimes()" disabled>
+            <option selected disabled>Chọn ngày</option>
+          </select>
+        </div>
+        <div class="col-lg-3 dropdown">
+          <select class="form-select" id="timeSelect" disabled>
+            <option selected disabled>Chọn suất</option>
+          </select>
+        </div>
+      </div>
+      <div class="btn btn-quick__book">
+        <button class="btn btn-warning" id="quickBookBnt" disabled>ĐẶT NGAY</button>
+      </div>
+    </div>
+
+
+    <!--SHOWING NOW-->
+    <section class="showing__now">
+      <div class="container">
+        <h2 class="text-center">PHIM ĐANG CHIẾU</h2>
+        <div class="slider-container">
+          <div class="carousel slide showing__carousel" data-bs-wrap="false">
+
+            <div id="showingIndicators" class="carousel-indicators">
+              <button type="button" onclick="goToSlide(0, 'showing')"></button>
+              <button type="button" onclick="goToSlide(1, 'showing')"></button>
+              <button type="button" onclick="goToSlide(2, 'showing')"></button>
+            </div>
+
+            <div class="slider" id="showingSlider">
+              <!--Cac slide se duoc tao tu dong bang JavaScipt => tai day-->
+            </div>
+
+            <div class="slider-controls showing__controls">
+              <button onclick="prevSlide('showing')" id="showingprevBtn">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button onclick="nextSlide('showing')" id="showingnextBtn">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-see__more">
+          <a href="#" class="see-details">XEM THÊM</a>
+        </button>
+      </div>
+    </section>
+
+
+    <!--COMING SOON-->
+    <section class="coming__soon">
+      <div class="container">
+        <h2 class="text-center">PHIM SẮP CHIẾU</h2>
+        <div class="slider-container">
+          <div class="carousel slide coming__carousel" data-bs-wrap="false">
+
+            <div id="comingIndicators" class="carousel-indicators">
+              <button type="button" onclick="goToSlide(0, 'coming')"></button>
+              <button type="button" onclick="goToSlide(1, 'coming')"></button>
+              <button type="button" onclick="goToSlide(2, 'coming')"></button>
+            </div>
+
+            <div class="slider coming__slider" id="comingSlider">
+              <!--Cac slide se duoc tao tu dong bang JavaScipt => tai day-->
+            </div>
+
+            <div class="slider-controls coming__controls">
+              <button onclick="prevSlide('coming')" id="comingprevBtn">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button onclick="nextSlide('coming')" id="comingnextBtn">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-see__more">
+          <a href="#" class="see-details">XEM THÊM</a>
+        </button>
+      </div>
+    </section>
+
+
+    <!--VOUCHER-->
+    <section class="vouchers">
+      <div class="container">
+        <h2 class="text-center">KHUYẾN MẠI</h2>
+        <div class="slider-container">
+          <div class="carousel slide voucher__carousel" data-bs-wrap="carousel">
+
+            <div id="voucherIndicators" class="carousel-indicators">
+              <button type="button" onclick="goToSlide(0, 'voucher')"></button>
+              <button type="button" onclick="goToSlide(1, 'voucher')"></button>
+            </div>
+            <div class="slider voucher__slider" id="voucherSlider">
+              <!--Cac slide se duoc tao tu dong bang JavaScipt => tai day-->
+            </div>
+
+            <div class="slider-controls voucher__controls">
+              <button onclick="prevSlide('voucher')" id="voucherprevBtn">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </button>
+              <button onclick="nextSlide('voucher')" id="vouchernextBtn">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-see__more">
+          <a href="#" class="see-details">TẤT CẢ ƯU ĐÃI</a>
+        </button>
+      </div>
+    </section>
+
+
+    <!--CONTACT US-->
+    <section class="contact">
+      <div class="contact__method">
+        <h2 class="text-center">LIÊN HỆ VỚI CHÚNG TÔI</h2>
+        <div class="group-button methods">
+          <div class="method">
+            <img src="../icons/facebook_img.png" alt="Facebook" class="contact__icon">
+            <button type="button" class="btn btn__method">FACEBOOK</button>
+          </div>
+          <div class="method">
+            <button type="button" class="btn btn__method">ZALO CHAT</button>
+            <img src="../icons/zalo_img.png" alt="Zalo" class="contact__icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="contact__form">
+        <form>
+          <div class="header__form">
+            <h4 class="form__title">THÔNG TIN LIÊN HỆ</h4>
+            <ul class="contact__details">
+              <li class="email">
+                <i class="bi bi-envelope-fill"></i> mt.cinpenut@gmail.com
+              </li>
+              <li class="phone">
+                <i class="bi bi-telephone-fill"></i> 1900.0085
+              </li>
+              <li class="address">
+                <i class="bi bi-geo-alt-fill"></i> 123 Phố Quang Trung, Hà Cầu, Hà Đông, Hà Nội
+              </li>
+            </ul>
+          </div>
+
+          <div class="mb-3 infor__1">
+            <input class="form-control" id="inputName" placeholder="Họ và tên">
+          </div>
+          <div class="mb-3 infor__2">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Điền email">
+          </div>
+          <div class="mb-3 infor__3">
+            <textarea class="form-control" id="inputComment" rows="10"
+              placeholder="Điền thông tin liên hệ hoặc phản ánh"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-send">GỬI NGAY</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <!--End Main-->
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container first__footer">
+      <div class="row justify-content-start">
+        <div class="col-lg-2 col__1">
+          <img src="../icons/logo_cinema.png" alt="Cinema logo" height="20" id="logo">
+          <span>BE HAPPY, BE A STAR</span>
+          <button type="button" class="btn btn-book" id="bookButton">
+            <a href="#" class="footer__book"></a>ĐẶT VÉ
+          </button>
+          <div class="d-flex flex-row">
+            <div class="p-2">
+              <a href="#">
+                <i class="bi bi-facebook" style="color: white; font-size: 22px;"></i>
+              </a>
+            </div>
+            <div class="p-2">
+              <a href="#">
+                <i class="bi bi-youtube" style="color: white; font-size: 22px;"></i>
+              </a>
+            </div>
+            <div class="p-2">
+              <a href="#">
+                <img src="../icons/tiktok.png" alt="Tiktok" id="tiktok" style="font-size: 22px;">
+              </a>
+            </div>
+            <div class="p-2">
+              <a href="#">
+                <img src="../icons/zalo.png" alt="Zalo" id="zalo" style="font-size: 22px;">
+              </a>
+            </div>
+          </div>
+          <div class="language-selector">
+            <div class="vi-lan d-flex">
+              <span>Ngôn ngữ:</span>
+              <div class="d-flex align-items-center vi-group">
+                <a class="nav-link nav-vi" href="#">
+                  <img id="flag-icon" src="../icons/vi.png" alt="Vietnamese" height="20" style="margin-left: 10px;">
+                  <span id="language-text" class="ms-0">VN</span>
+                </a>
+              </div>
+            </div>
+            <div class="dropdown-menu">
+              <a class="nav-link nav-en">
+                <div class="dropdown-item" onclick="changeLanguage('en')">
+                  <img src="../icons/en.png" alt="English" height="20"> ENG
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col__2">
+          <h6 class="title">TÀI KHOẢN</h6>
+          <a href="#">Đăng nhập</a>
+          <a href="#">Đăng ký</a>
+        </div>
+
+        <div class="col-lg-2 col__3">
+          <h6 class="title">XEM PHIM</h6>
+          <a href="#">Phim đang chiếu</a>
+          <a href="#">Phim sắp chiếu</a>
+        </div>
+
+        <div class="col-lg-2 col__4">
+          <h6 class="title">CINPENUT</h6>
+          <a href="#">Liên hệ</a>
+        </div>
+
+        <div class="col-lg-2 col__5">
+          <h6 class="title">HỆ THỐNG RẠP</h6>
+          <span>Tất cả hệ thống rạp</span>
+          <span>Cinpenut Quốc Thanh (TP.HCM)</span>
+          <span>Cinpenut Hai Bà Trưng (TP.HCM)</span>
+          <span>Cinpenut Sinh Viên (Bình Dương)</span>
+          <span>Cinpenut Mỹ Tho (Tiền Giang)</span>
+          <span>Cinpenut Kiên Giang (Rạch Sỏi)</span>
+        </div>
+      </div>
+    </div>
+    <div class="last__footer">
+      <ul class="footer__info">
+        <li class="i__1">CÔNG TY CỔ PHẦN GIẢI TRÍ PHÁT HÀNH PHIM – RẠP CHIẾU PHIM ĐẬU LẠC</li>
+        <li class="i__2">ĐỊA CHỈ: 135 HAI BÀ TRƯNG, PHƯỜNG BẾN NGHÉ, QUẬN 1, TP.HCM</li>
+        <li class="i__3">GIẤY CNĐKDN SỐ: 0312742744, ĐĂNG KÝ LẦN ĐẦU NGÀY 18/04/2014, ĐĂNG KÝ THAY ĐỔI LẦN THỨ 2 NGÀY
+          15/09/2014, CẤP BỞI SỞ KH&ĐT TP.HCM</li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script src="quickBook.js"></script>
+  <script src="showingNow_comingSoon.js"></script>
+  <script src="../bootstrap-5.3.3/js/bootstrap.bundle.js"></script>
+  <script src="../bootstrap-5.3.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

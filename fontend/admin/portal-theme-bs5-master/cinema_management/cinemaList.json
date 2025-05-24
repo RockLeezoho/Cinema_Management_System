@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Cinpenut Quốc Thanh",
+        "image": "../images/quoc_thanh.jpg",
+        "location": "Quốc Thanh"
+    },
+    {
+        "title": "Cinpenut Hai Bà Trưng",
+        "image": "../images/Hai_ba_trung.jpg",
+        "location": "Hai Bà Trưng, TP.HCM"
+    },
+    {
+        "title": "Cinpenut Sinh Viên",
+        "image": "../images/sinh_vien.jpg",
+        "location": "Bình Dương"
+    }
+]

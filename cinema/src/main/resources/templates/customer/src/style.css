@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #0a3206, #3a5f0b);
+    color: white;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    background: #002000;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.banner {
+    background: url('banner.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.banner h2 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.btn {
+    background: yellow;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.movies {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.movie-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.movie-item {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.movie-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.promotion {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.promo-content img {
+    width: 45%;
+    margin: 5px;
+}
+
+.footer {
+    background: #002000;
+    text-align: center;
+    padding: 20px 0;
+}

@@ -1,0 +1,5 @@
+[
+    { "cinema_id": 1, "number": "P1", "seats": 100, "position": "Tầng 1" },
+    { "cinema_id": 1, "number": "P2", "seats": 120, "position": "Tầng 2" },
+    { "cinema_id": 2, "number": "P1", "seats": 80, "position": "Tầng 1" }
+]

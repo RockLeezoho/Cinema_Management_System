@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Người lớn-đôi",
+        "price": 95.000,
+        "special_offer": "VC1329L2"
+    },
+    {
+        "name": "Người lớn-đơn",
+        "price": 45.000,
+        "special_offer": "VC1329L1"
+    },
+    {
+        "name": "HSSV-Người cao tuổi",
+        "price": 45.000,
+        "special_offer": "VC1329L2"
+    }
+
+]

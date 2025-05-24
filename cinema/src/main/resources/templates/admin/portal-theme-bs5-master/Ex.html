@@ -1,0 +1,129 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // Hàm tải dữ liệu phim từ JSON
+    function loadMovies(targetTableId, filterType = "all") {
+        fetch("movieList.json") // Đọc file JSON
+            .then((response) => response.json())
+            .then((data) => {
+                const tableBody = document.querySelector(`#${targetTableId} tbody`);
+                tableBody.innerHTML = ""; // Xóa dữ liệu cũ trước khi cập nhật mới
+
+                // Lọc phim theo loại nếu có yêu cầu
+                let filteredMovies = data.movies;
+                if (filterType === "most-viewed") {
+                    filteredMovies = filteredMovies.sort((a, b) => b.views - a.views); // Sắp xếp giảm dần theo lượt xem
+                }
+
+                // Chèn dữ liệu vào bảng
+                filteredMovies.forEach((movie, index) => {
+                    const row = `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td><img src="${movie.poster}" width="50"></td>
+                            <td>${movie.title}</td>
+                            <td>${movie.genre}</td>
+                            <td>${movie.age_rating}</td>
+                            <td>${movie.country}</td>
+                            <td>${movie.views}</td>
+                            <td>${movie.status}</td>
+                            <td class="cell">
+                                <button type="button" class="btn app-btn-secondary" style="font-size:13px;width:76px;height:25px;padding:0;" onclick="openMovieDetail(${index})">Xem chi tiết</button>
+                            </td>
+                            <td class="cell">
+                                <button type="button" class="btn app-btn-secondary" style="font-size:13px;width:76px;height:25px;padding:0;" onclick="deleteMovies(${index})">Xóa</button>
+                            </td>
+                        </tr>
+                    `;
+                    tableBody.innerHTML += row;
+                });
+            })
+            .catch((error) => console.error("Lỗi khi tải phim:", error));
+    }
+
+    // Gọi dữ liệu cho tab đầu tiên khi trang tải
+    loadMovies("moviesAll", "all");
+
+    // Thêm sự kiện khi chuyển tab
+    document.querySelectorAll('a[data-bs-toggle="tab"]').forEach((tab) => {
+        tab.addEventListener("shown.bs.tab", function (event) {
+            const targetTabId = event.target.getAttribute("href").substring(1); // Lấy ID của tab
+            if (targetTabId === "orders-all") {
+                loadMovies("moviesAll", "all");
+            } else if (targetTabId === "orders-pending") {
+                loadMovies("moviesView", "most-viewed");
+            }
+        });
+    });
+});
+
+// 🟢 Hiển thị modal Xem Chi Tiết Phim
+function openMovieDetail(index) {
+    fetch("movieList.json") // Giả sử có danh sách phim
+        .then(response => response.json())
+        .then(data => {
+            const movie = data.movies[index];
+
+            // Gán dữ liệu vào form
+            document.getElementById("detailMovieTitle").value = movie.title;
+            document.getElementById("detailMovieGenre").value = movie.genre;
+            document.getElementById("detailMovieDirector").value = movie.director;
+            document.getElementById("detailMovieActors").value = movie.actors;
+            document.getElementById("detailMovieYear").value = movie.year;
+            document.getElementById("detailMovieDuration").value = movie.duration;
+            document.getElementById("detailMovieCountry").value = movie.country;
+            document.getElementById("detailMovieStatus").value = movie.status;
+            document.getElementById("detailMovieAge").value = movie.age_rating;
+            document.getElementById("detailMovieView").value = movie.views;
+            document.getElementById("detailMovieDescription").value = movie.description;
+            document.getElementById("posterPreview").src = movie.poster;
+
+            // Hiển thị modal
+            const movieDetailModal = new bootstrap.Modal(document.getElementById("movieDetailModal"));
+            movieDetailModal.show();
+        })
+        .catch(error => console.error("Lỗi khi tải dữ liệu phim:", error));
+}
+
+// 🟢 Hàm cập nhật phim
+function updateMovie(index) {
+    console.log(`Cập nhật phim có ID: ${index}`);
+    alert("Phim đã được cập nhật!");
+}
+
+// 🟢 Hàm xóa phim
+function deleteMovies(index) {
+    console.log(`Xóa phim có ID: ${index}`);
+    alert("Phim đã bị xóa!");
+}
+
+// 🟢 Sự kiện tải ảnh lên cho modal xem chi tiết
+document.getElementById("uploadDetailBtn").addEventListener("click", function () {
+    document.getElementById("detailMoviePoster").click();
+});
+
+document.getElementById("detailMoviePoster").addEventListener("change", function (event) {
+    const file = event.target.files[0];
+
+    if (file) {
+        // Kiểm tra định dạng file
+        const allowedTypes = ["image/png", "image/jpg", "image/jpeg"];
+        if (!allowedTypes.includes(file.type)) {
+            alert("Định dạng file không hợp lệ! Chỉ chấp nhận PNG, JPG, JPEG.");
+            this.value = ""; // Xóa file không hợp lệ
+            return;
+        }
+
+        // Kiểm tra dung lượng file
+        if (file.size > 5 * 1024 * 1024) {
+            alert("File quá lớn! Vui lòng chọn file nhỏ hơn 5MB.");
+            this.value = "";
+            return;
+        }
+
+        // Hiển thị ảnh xem trước
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            document.getElementById("posterPreview").src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+});

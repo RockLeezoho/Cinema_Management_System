@@ -1,0 +1,53 @@
+{
+    "movie": {
+        "poster": "../images/nha_gia_tien.webp",
+        "title": "NHÀ GIA TIÊN (118)",
+        "genre": "Hài, Gia đình",
+        "duration": "117'",
+        "country": "Việt Nam",
+        "director": "Huỳnh Lập",
+        "performers": "Huỳnh Lập, Phương Mỹ Chi, NSƯT Hạnh Thuý, NSƯT Huỳnh Đông, Puka, Đào Anh Tuấn, Trung Dân, Kiều Linh, Lê Nam, Chí Tâm, Thanh Thức, Trác Thuý Miêu, Mai Thế Hiệp, NS Mạnh Dung, NSƯT Thanh Dậu, NS Thanh Hiền, Nguyễn Anh Tú",
+        "age_rating": "T18: Phim dành cho khán giả từ đủ 18 tuổi trở lên(18+)",
+        "plot": "Nhà Gia Tiên xoay quanh câu chuyện đa góc nhìn về các thế hệ khác nhau trong một gia đình, có hai nhân vật chính là Gia Minh (Huỳnh Lập) và Mỹ Tiên (Phương Mỹ Chi). Trở về căn nhà gia tiên để quay các video 'triệu view' trên mạng xã hội, Mỹ Tiên - một nhà sáng tạo nội dung thuộc thế hệ Z vốn không tin vào chuyện tâm linh, hoàn toàn mất kết nối với gia đình, bất ngờ nhìn thấy Gia Minh - người anh trai đã mất từ lâu. Để hồn ma của Gia Minh có thể siêu thoát và không tiếp tục làm phiền...",
+        "trailer": "https://www.youtube.com/watch?v=hXGozmNBwt4"
+    },
+    "locations": {
+        "Cinpenut Hà Nội": ["Phòng A", "Phòng B"],
+        "Cinpenut TP.HCM": ["Phòng X", "Phòng Y"]
+    },
+    "dates": ["Hôm nay", "Ngày mai", "30/03", "31/03", "01/04"],
+    "showtimes": ["08:00","09:30","10:00","11:30", "14:00","15:30","17:00","18:30","20:00","21:30","22:00"],
+    "ticketTypes": {"Người lớn-đơn": 50, "HSSV/người cao tuổi-đơn": 25, "Người lớn-đôi": 150},
+    "seats": {"A01": 0, "A02": 0,"A03": 0, "A04": 0, "A05": 0, "A06": 0, "A07": 0, "A08": 0,"A09": 0, "A10": 0, 
+            "B01": 0, "B02": 0, "B03": 0, "B04": 0, "B05": 0, "B06": 0, "B07": 0, "B08": 0,"B09": 0, "B10": 0, 
+            "C01": 0, "C02": 0,"C03": 0, "C04": 0, "C05": 0, "C06": 0, "C07": 0, "C08": 0,"C09": 0, "C10": 0,
+            "D01": 0, "D02": 0,"D03": 0, "D04": 0, "D05": 0, "D06": 0, "D07": 0, "D08": 0,"D09": 0, "D10": 0,
+            "E101": 0, "E102": 0, "E103": 0, "E104": 0, "E105": 0},
+    "foods": {
+        "coca 500ml":{
+            "type": "water_coca",
+            "image": "../images/coca.png",
+            "price": 25
+        },
+        "fanta 450ml":{
+            "type": "water_fanta",
+            "image": "../images/fanta.jpg",
+            "price": 20
+        },
+        "sprite 510ml":{
+            "type": "water_sprite",
+            "image": "../images/sprite.png",
+            "price": 30
+        },
+        "lays vị bò":{
+            "type": "snack_lays",
+            "image": "../images/lays-vi-bo_1_.png",
+            "price": 10
+        },
+        "Combo gấu":{
+            "type": "combo_popcorn",
+            "image": "../images/CNS035_COMBO_GAU.png",
+            "price": 45
+        }
+    }
+}

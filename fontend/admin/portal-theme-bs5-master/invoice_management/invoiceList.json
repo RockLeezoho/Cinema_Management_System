@@ -1,0 +1,38 @@
+[
+    {
+        "customer_account": "Trần Hiếu",
+        "product": "Bỏng socola",
+        "price": 20.000,
+        "quantity": 2,
+        "special_offer": "VC1329L2"
+    },
+    {
+        "customer_account": "Nguyễn Đạt",
+        "product": "Trà đào",
+        "price": 25.000,
+        "quantity": 1,
+        "special_offer": "Không"
+    },
+    {
+        "customer_account": "Lò Kiên",
+        "product": "Sữa chua việt quất",
+        "price": 25.000,
+        "quantity": 4,
+        "special_offer": "VC1329L2"
+    },
+    {
+        "customer_account": "Ngô Bảo",
+        "product": "Bỏng vị bò",
+        "price": 25.000,
+        "quantity": 1,
+        "special_offer": "Không"
+    },
+    {
+        "customer_account": "Hoàng Văn",
+        "product": "Trà thái",
+        "price": 20.000,
+        "quantity": 1,
+        "special_offer": "Không"
+    }
+
+]

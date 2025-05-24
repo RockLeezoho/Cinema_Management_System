@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Trà đào",
+        "image": "../images/tra_dao.jpg",
+        "type": "Đồ uống",
+        "quantity": 1000,
+        "price": "10.000",
+        "special_offer": "VC1329L1"
+    },
+    {
+        "title": "Bỏng ngô vị bò",
+        "image": "../images/bong_bo.jpg",
+        "type": "Đồ ăn",
+        "quantity": 2000,
+        "price": "25.000",
+        "special_offer": "VC459L1"
+    },
+    {
+        "title": "Móc khóa",
+        "image": "../images/moc_khoa.jpg",
+        "type": "Lưu niệm",
+        "quantity": 300,
+        "price": "20.000",
+        "special_offer": "VC1349L2"
+    },
+    {
+        "title": "Bỏng vị socola",
+        "image": "../images/bong_socola.jpg",
+        "type": "Đồ ăn",
+        "quantity": 2000,
+        "price": "20.000",
+        "special_offer": "VC1329L1"
+    },
+    {
+        "title": "Sữa chua việt quất",
+        "image": "../images/sua_chua.jpg",
+        "type": "Đồ uống",
+        "quantity": 100,
+        "price": "20.000",
+        "special_offer": "VC1329L2"
+    }
+]

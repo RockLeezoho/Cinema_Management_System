@@ -1,0 +1,93 @@
+/* Navbar Styles */
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+    background-color: #0f0f0f;
+}
+
+.fixed-navbar {
+    padding: 0;
+    min-height: 50px;
+}
+
+/* Booking Buttons */
+.btn-warning {
+    height: 36px;
+    padding: 0;
+    min-width: 130px;
+}
+
+.btn-warning .nav-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #000 !important;
+    font-size: 14px;
+    padding: 0 15px !important;
+}
+
+/* Navigation Links */
+.nav-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 15px !important;
+    color: #fff !important;
+    font-size: 14px;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+/* Mobile Menu */
+.mobile-booking-btn {
+    background-color: #ffc107;
+    color: #000 !important;
+    padding: 8px 15px !important;
+    border-radius: 4px;
+    margin: 5px 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0f0f0f;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link {
+        padding: 10px 15px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Body Padding */
+body {
+    padding-top: 50px;
+    background-color: #0f0f0f;
+}
+
+/* Remove search cancel button */
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}

@@ -1,0 +1,73 @@
+{"movies" : [
+    {
+      "title": "Avengers: Endgame",
+      "poster": "assets/images/doc-thumb-1.jpg",
+      "genre": "Hành động",
+      "director": "John Guiler",
+      "actors": "Thomson Mei",
+      "year": 2020,
+      "duration": 117,
+      "country": "US",
+      "age_rating": "T18",
+      "status": "Đang chiếu",
+      "views": 1000,
+      "description": "Phim hành động hay nhất của Mỹ"
+    },
+    {
+      "title": "Spider-Man: No Way Home",
+      "poster": "assets/images/doc-thumb-2.jpg",
+      "genre": "Hành động",
+      "director": "Elizabeth Allen",
+      "actors": "Robert De Niro, Jack Nicholson",
+      "year": 2018,
+      "duration": 100,
+      "country": "UK",
+      "age_rating": "T16",
+      "status": "Đang chiếu",
+      "views": 100,
+      "description": "Phim hành động hay nhất của Mỹ"
+    },
+    {
+      "title": "Nhà gia tiên",
+      "poster": "assets/images/doc-thumb-1.jpg",
+      "genre": "Gia đình",
+      "director": "Huỳnh Lập",
+      "actors": "Huỳnh Lập, Phương Mỹ Chi, Chí Tâm, NSƯT Hạnh Thúy, Đào Anh Tuấn, Kiều Linh, Puka, NSƯT Huỳnh Đông",
+      "year": 2024,
+      "duration": 200,
+      "country": "VietNam",
+      "age_rating": "T13",
+      "status": "Sắp chiếu",
+      "views": 200,
+      "description": "Phim gia đình hay của Việt Nam"
+    },
+    {
+      "title": "Nhà ga ma chó",
+      "poster": "assets/images/doc-thumb-1.jpg",
+      "genre": "Kinh dị",
+      "director": "Luis Prieto",
+      "actors": "Natalia Azahara, Valèria Sorolla, Javier Gutiérrez",
+      "year": 2024,
+      "duration": 160,
+      "country": "Chưa biết",
+      "age_rating": "T18",
+      "status": "Sắp chiếu",
+      "views": 78,
+      "description": "Phim kinh dị, bí ẩn đặc sắc"
+    },
+    {
+      "title": "Anh không đau",
+      "poster": "assets/images/doc-thumb-1.jpg",
+      "genre": "Hành động",
+      "director": "Dan Berk, Robert Olsen",
+      "actors": "Jack Quaid, Ray Nicholson",
+      "year": 2021,
+      "duration": 130,
+      "country": "UK",
+      "age_rating": "T18",
+      "status": "Sắp chiếu",
+      "views": 56,
+      "description": "Phim hành động li kì về chàng trai không thể cảm nhận được nỗi đau"
+    }
+  ]
+}

@@ -1,1 +1,2 @@
-# Cinemas_Manager_System
+# Cinemas Manager System
+# Using: Spring Boot, Spring Data JPA,...

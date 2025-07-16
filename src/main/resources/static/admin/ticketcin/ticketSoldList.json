@@ -1,0 +1,33 @@
+[
+    {
+        "customer_account": "Trần Hiếu",
+        "name": "Người lớn-đôi",
+        "price": 95.000,
+        "special_offer": "VC1329L2"
+    },
+    {
+        "customer_account": "Nguyễn Đạt",
+        "name": "Người lớn-đơn",
+        "price": 45.000,
+        "special_offer": "Không"
+    },
+    {
+        "customer_account": "Lò Kiên",
+        "name": "HSSV-Người cao tuổi",
+        "price": 45.000,
+        "special_offer": "VC1329L2"
+    },
+    {
+        "customer_account": "Ngô Bảo",
+        "name": "HSSV-Người cao tuổi",
+        "price": 45.000,
+        "special_offer": "Không"
+    },
+    {
+        "customer_account": "Hoàng Văn",
+        "name": "HSSV-Người cao tuổi",
+        "price": 45.000,
+        "special_offer": "Không"
+    }
+
+]

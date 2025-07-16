@@ -1,0 +1,16 @@
+{
+    "GIẢM 45K CHO HỌC SINH SINH VIÊN":
+    {
+        "title": "Đồng giá 45k/2D cho HSSV/GV cả tuần tại mọi cụm rạp.",
+        "poster": "../images/Km_hoc_sinh.png",
+        "condition": "HSSV xuất trình thẻ HSSV hoặc CCCD từ dưới 22 tuổi.",
+        "notice": "Mỗi thẻ mua được một vé. Không áp dụng cho các dịp Lễ, Tết."
+    },
+    "ĐỒNG GIÁ 45K/2D MỐC 10H": 
+    {
+        "title": "Đồng giá 45k/2D áp dụng cho khách hàng xem phim trước 10h sáng và sau 10h tối.",
+        "poster": "../images/km_dong_gia.png",
+        "condition": "Áp dụng tại Web hoặc mua trực tiếp tại rạp.",
+        "notice": "Không áp dụng cho các dịp Lễ, Tết."
+    }
+}

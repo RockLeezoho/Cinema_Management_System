@@ -1,0 +1,784 @@
+/* Header*/
+/*Reset margin va padding mac dinh cua html, body*/
+html,
+body {
+    position: relative;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #00260a;
+    max-width: 100%;
+    max-height: 100%;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: 
+    url('/images/Ellipse21.png'),
+        url('/images/Background_Blur.png'),
+        url('/images/Ellipse31.png');
+    background-repeat: no-repeat,
+                        no-repeat,
+                        no-repeat;
+    background-position: center right,
+                        center center,
+                        center left;
+    background-size: 200px 500px,
+                    750px 750px,
+                    300px 600px;
+    z-index: -1; 
+}
+
+
+
+header {
+    position: fixed;
+    background-color: #00260a;
+}
+
+.header--first {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header--first .bg-dark {
+    background-color: transparent !important;
+}
+
+.header-wrapper {
+    z-index: 1030;
+    margin-left: 28px;
+    margin-right: 28px;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    gap: 3.2rem;
+    height: 74.8px;
+    max-width: 100%;
+    padding: 0px 0px 0px 0px;
+    min-height: 50px;
+    margin: 0;
+}
+
+.container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-group-fi {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+.nav-group-se {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+}
+
+/* Search Box */
+.search-bar {
+    max-width: 1000px;
+    width: 320px;
+    margin-right: 0px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #fff;
+    border-color: #fff;
+    padding-top: 5px;
+}
+
+.input-group {
+    margin-left: 0px;
+}
+
+.input-group .form-control {
+    height: 36px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: #000000;
+    font-size: 14px;
+    padding-top: 4px;
+    box-shadow: none;
+}
+
+.input-group .btn {
+    height: 36px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding-top: 4px;
+}
+
+
+.equal-btn {
+    background-color: #f3ea28;
+    width: 139px;
+    height: 40px;
+    align-items: center;
+}
+.equal-btn:hover {
+    background-color: #f3ea28;
+}
+
+/* User Menu */
+.user-menu {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 0px;
+}
+
+.person-circle {
+    margin-right: 20px;
+    align-items: center;
+    gap: 6px;
+}
+
+.person-circle:hover {
+    color: #f3ea28;
+}
+.user-menu .nav-link.person-circle:hover i.bi-person-circle {
+    color: inherit; /* Giu nguyen mau */
+    transform: none; /* Ngan chan hieu ung thay doi */
+}
+
+.group-search-menu {
+    display: flex;
+}
+
+/* Main Navigation */
+.main-nav {
+    height: 45px;
+    min-height: 40px;
+    padding: 0px;
+    margin: 0;
+}
+
+.bottom__header {
+    border-top: 1px solid #014111;
+}
+
+.main-nav .nav-link {
+    color: #fff;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+    color: #f3ea28;
+}
+
+.vi-desktop:hover {
+    color: #f3ea28;
+}
+
+/*Change languages*/
+.language-selector {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    min-width: 5px;
+    max-width: 300px;
+    margin-left: 0px;
+    min-height: 30px;
+    height: 20px;
+    width: auto;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* Ban dau dich len mot chut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 20px;
+    padding: 5px;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    background: transparent;
+    border: none;
+}
+
+.language-selector:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(0px); /* Tra ve vi tri ban dau*/
+    padding: 0px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0px 0px 0px;
+    color: #fff;
+}
+
+.dropdown-item img {
+    margin-right: 5px;
+}
+
+.drop-item:focus .drop-item:active {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+/* Mobile Menu */
+@media (max-width: 991.98px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #00260a;
+        border-top: 1px solid #014111;
+        color: #fff;
+    }
+
+    .nav-vi:hover {
+        color: #fff; /* Không đổi màu khi hover */
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+    }
+
+    .dropdown-language:hover .text-hover,
+    .dropdown-language:hover i {
+        color: #f3ea28; /* Đổi màu chữ VN */
+    }
+
+    .nav-link:hover,
+    .vi-group:hover {
+        color: #f3ea28;
+    }
+
+    .lg-action {
+        cursor: pointer;
+        gap: 0 0.8rem;
+        position: relative;
+    }
+
+    .dropdown-menu {
+        min-width: 5px;
+        max-width: 300px;
+        min-height: 30px;
+        height: 15px;
+        width: 80px;
+        margin-left: 95px;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Ban đầu dịch lên một chút */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-radius: 20px;
+        padding: 5px;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+        background: transparent;
+        border: none;
+    }
+
+    .language-selector:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Trả về vị trí ban đầu */
+        padding: 0px;
+    }
+
+    .dropdown-item:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 5px 9px;
+        color: #fff;
+    }
+
+    .dropdown-item img {
+        margin-right: 5px;
+    }
+
+    .drop-item:focus .drop-item:active {
+        background-color: transparent;
+        color: inherit;
+    }
+
+    .mobile-search {
+        width: 260px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 5px;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Remove search cancel button */
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+
+
+/***************************Main**********************/
+/* Đổi tên class trong CSS tương ứng */
+
+/*---------------Banner Slider----------------*/
+main {
+    width: 100%;
+    height: auto;
+    /* background-color: #00260a; */
+    padding-top: 120px;
+}
+
+.banner__slide {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: all .2s;
+} 
+
+.banner__control {
+    opacity: 1; /*Dam bao icon khong mo*/
+    height: 4rem;
+    width: 4rem;
+    top: 38%;
+}
+
+.banner__control:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(45%) saturate(529%) hue-rotate(1deg) brightness(103%) contrast(103%);
+}
+
+.btn-book__now {
+    position: absolute;
+    bottom: 60px;
+    right: 20%;
+    background-color: #f3ea28;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 220px;
+    height: 50px;
+}
+
+
+/*----------------Quick Book------------------*/
+.quick__book {
+    background-color: #f9ffec;
+    display: flex;
+    max-width: 1198px;
+    width: 100%;
+    border-radius: .2rem;
+    padding: 1rem 2rem 1rem 2rem;
+    align-items: center;
+}
+
+.container .group-quick__book {
+    margin-right: 0rem;
+    margin-left: 5rem;
+    width: 720px;
+}
+
+.container .btn-quick__book {
+    padding-right: 0;
+    border: none;
+}
+
+
+/*---------------------------Showing Now, Coming soon and Voucher-------------------------*/
+.showing__now, 
+.coming__soon,
+.vouchers{
+    align-items: center;
+    margin-top: 100px;
+}
+
+.showing__now h2 , 
+.coming__soon h2,
+.vouchers{
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.showing__now .slider-container, 
+.coming__soon .slider-container,
+.vouchers .slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    /* margin-bottom: 1000px;; */
+}
+.showing__now .slider, 
+.coming__soon .slider,
+.vouchers .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    /* gap: 2px; */
+}
+.showing__now .slide, 
+.coming__soon .slide {
+    position: relative; /*De phan tu con tuyet doi co the bam vao*/
+    flex: 0 0 25%;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.vouchers .slide {
+    position: relative; /*De phan tu con tuyet doi co the bam vao*/
+    flex: 0 0 33.34%;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.showing__slide img, 
+.coming__slide img,
+.voucher__slide img {
+    position: relative; /* Lam cha cho phan tu con gan nhat (slide-top-infor)*/
+    width: 100%;
+    z-index: 1; /*Dua anh xuong duoi*/
+    transition: border 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.showing__slide .movie__item:hover, 
+.coming__slide .movie__item:hover,
+.voucher__slide .voucher__item:hover {
+    filter: brightness(1.2); /*Dieu chinh do sang cua phan tu*/
+    border: 3px solid #f3ea28;
+}
+
+
+.showing__slide .btn-container a, 
+.coming__slide .btn-container a {
+    color: #fff;
+}
+
+.showing__slide .btn-container .btn-book, 
+.coming__slide .btn-container .btn-book {
+    font-size: 15px;
+    background-color: #f3ea28;
+    color: #000;
+}
+
+.slide-content {
+    padding: 10px;
+    text-align: center;
+}
+.slide-top-info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 2; /*Giup hien thi tren anh*/
+    white-space: nowrap; /* Tranh bi xuong dong */
+}
+
+.showing__controls, 
+.coming__controls,
+.voucher__controls {
+    position: absolute;
+    top: 50%;
+    width: 98%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.showing__controls #showingnextBtn:hover, 
+.coming__controls #comingnextBtn:hover,
+.voucher__controls #vouchernextBtn:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(45%) saturate(529%) hue-rotate(1deg) brightness(103%) contrast(103%);
+}
+.showing__controls #showingprevBtn:hover, 
+.coming__controls #comingprevBtn:hover,
+.voucher__controls #voucherprevBtn:hover {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(45%) saturate(529%) hue-rotate(1deg) brightness(103%) contrast(103%);
+}
+
+/* CO THE DUNG CHUNG*/
+.slider-controls button {
+    background: none;
+    border: none;
+    cursor: pointer; /*Bien con tro thanh hinh ban tay*/
+}
+
+.showing__carousel, 
+.coming__carousel,
+.voucher__carousel {
+    color: #fff;
+}
+
+.showing__carousel .showing__slide .slide-content,
+.coming__carousel .coming__slide .slide-content,
+.voucher__carousel .voucher__slide .slide-content {
+    max-height: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.showing__carousel .slide-content h5,
+.coming__carousel .slide-content h5 {
+    min-height: 50px; /*Du 3 dong tuy theo font size*/
+    margin-bottom: 10px;
+}
+
+.showing__now .carousel-indicators button,
+.coming__soon .carousel-indicators button,
+.vouchers .carousel-indicators button {
+    width: 10px;
+    height: 12px;
+    margin: 5px;
+    border-radius: 50%;
+    border: none;
+    background-color: gray;
+}
+
+.showing__carousel .carousel-indicators,
+.coming__carousel .carousel-indicators {
+    top: 560px;
+}
+
+.voucher__carousel .carousel-indicators {
+    top: 217px;
+}
+
+.showing__carousel .carousel-indicators button.active,
+.coming__carousel .carousel-indicators button.active,
+.voucher__carousel .carousel-indicators button.active {
+    background-color: #fff;
+}
+
+.btn-see__more {
+    color: #f3ea28;
+    max-width: 100%;
+    width: 200px; 
+    max-height: 100%;
+    border-color: #f3ea28;
+    padding: 10px 20px;
+    margin-left: 41%;
+    margin-top: 25px;
+}
+
+.btn-see__more a {
+    text-decoration: none; /*Bo gach chan mac dinh cua a*/
+    color: inherit;
+    display: block;
+    padding: center;
+}
+
+.btn-see__more:hover {
+    background: #f3ea28;
+    color: #000;
+}
+
+.showing__slide .btn-container img,
+.coming__slide .btn-container img {
+    width: 20px;  
+    height: 20px; 
+    border-radius: 5px;
+}
+
+/*-----------------------CONTACT US--------------*/
+/*.contact {
+    display: flex; /*Dat hai phan tu thanh hang ngang*/
+/*    justify-content: space-between; /*Cach deu hai phan tu*/
+ /*   align-items: flex-start; /*Can theo chieu doc*/
+ /*   gap: 20px; /*Khoang cach giua hai phan tu*/
+
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 200px;
+    margin-right: 100px;
+}
+
+.contact__method {
+    flex: 1;
+    max-width: 40%;
+    color: #fff;
+    margin: 50px 0px 20px 140px;
+}
+
+.contact__method h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.methods .btn__method {
+    color: #fff;
+    background: linear-gradient(to right, #b3cd2e, #097d30);
+    max-height: 90px;
+    max-width: 300px;
+    height: 60px;
+    width: 300px;
+    margin-top: 50px;
+}
+
+.contact__method img {
+    width: 110px;
+    height: 110px;
+}
+
+.contact__form {
+    flex: 1;
+    max-width: 60%;
+    color: #fff;
+    background-color: #09890e;
+    padding: 50px;
+}
+
+.contact__form ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact__form input::placeholder,
+.contact__form textarea::placeholder {
+    color: #94a3b8;
+}
+
+.contact__form .btn-send {
+    font-size: 15px;
+    background-color: #f3ea28;
+    color: #000;
+    width: 150px;
+}
+.contact__form .btn-send:hover {
+    background-color: #b3cd2e;
+    color: #000;
+}
+
+
+/*----------------------FOOTER-----------------*/
+.footer {
+    background: linear-gradient(to right, #809903, #03822d);
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    color: #fff;
+}
+
+.first__footer {
+    padding-top: 100px;
+}
+
+.first__footer .row {
+    display: flex;
+    gap: 40px;
+}
+
+.first__footer .col__1,
+.col__2,
+.col__3,
+.col__4,
+.col__5 {
+    display: flex;
+    flex-direction: column; /*Can cac phan tu theo chieu doc*/
+    align-items: left; /*Can trai theo chieu ngang*/
+    text-align: left; /*Can text giua*/
+}
+
+.first__footer .col__2 a,
+.col__3 a, 
+.col__4 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.first__footer .col__1 .btn-book {
+    margin: 10px 0;
+    background-color: #f3ea28;
+    max-width: 200px;
+    width: 150px;
+}
+
+.first__footer .col__1 #logo {
+    height: 40px;
+    width: 120px;
+}
+
+.first__footer .col__1 .dropdown-menu {
+    margin-left: 80px;
+}
+
+.last__footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    font-size: 9px;
+    margin-top: 90px;
+}
+
+.last__footer ul {
+    border-top: 1px solid #fff;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    max-width: 100%;
+    width: 90%;
+}
+

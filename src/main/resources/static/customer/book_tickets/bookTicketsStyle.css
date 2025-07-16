@@ -1,0 +1,708 @@
+/* Header*/
+/*Reset margin va padding mac dinh cua html, body*/
+html,
+body {
+    position: relative;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    background-color: #00260a;
+    max-width: 100%;
+    max-height: 100%;
+}
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    background-image: 
+    url('/images/Ellipse21.png'),
+    url('/images/Ellipse31.png'),
+    /* url('../images/bg_regis.png'), */
+    url('/images/Background+Blur.png');
+    background-repeat: 
+                        /* no-repeat, */
+                        no-repeat,
+                        no-repeat,
+                        no-repeat;
+    background-position: 
+                        /* center right, */
+                        center right,
+                        center left,
+                        center center;
+    background-size: 
+                    200px 500px,
+                    /* 750px 750px, */
+                    300px 600px,
+                    1200px 550px;
+    z-index: -1; 
+}
+
+
+
+header {
+    position: fixed;
+    background-color: #00260a;
+}
+
+.header--first {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header--first .bg-dark {
+    background-color: transparent !important;
+}
+
+.header-wrapper {
+    z-index: 1030;
+    margin-left: 28px;
+    margin-right: 28px;
+    font-size: 16px;
+    font-weight: 450;
+}
+
+/* Top Navigation */
+.top-nav {
+    display: flex;
+    gap: 3.2rem;
+    height: 74.8px;
+    max-width: 100%;
+    padding: 0px 0px 0px 0px;
+    min-height: 50px;
+    margin: 0;
+}
+
+.container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-group-fi {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+}
+.nav-group-se {
+    display: flex;
+    justify-content: space-between;
+    width: 380px;
+}
+
+/* Search Box */
+.search-bar {
+    max-width: 1000px;
+    width: 320px;
+    margin-right: 0px;
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #fff;
+    border-color: #fff;
+    padding-top: 5px;
+}
+
+.input-group {
+    margin-left: 0px;
+}
+
+.input-group .form-control {
+    height: 36px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    color: #000000;
+    font-size: 14px;
+    padding-top: 4px;
+    box-shadow: none;
+}
+
+.input-group .btn {
+    height: 36px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    padding-top: 4px;
+}
+
+
+.equal-btn {
+    background-color: #f3ea28;
+    width: 139px;
+    height: 40px;
+    align-items: center;
+}
+
+/*Bootstrap co san hieu ung hover => ghi de css neu khong muon co hieu ung hover*/
+.equal-btn:hover {
+    background-color: #f3ea28;
+    color: #000;
+}
+
+/* User Menu */
+.user-menu {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 0px;
+}
+
+.person-circle {
+    margin-right: 20px;
+    align-items: center;
+    gap: 6px;
+}
+
+.person-circle:hover {
+    color: #f3ea28;
+}
+.user-menu .nav-link.person-circle:hover i.bi-person-circle {
+    color: inherit; /* Giu nguyen mau */
+    transform: none; /* Ngan chan hieu ung thay doi */
+}
+
+.group-search-menu {
+    display: flex;
+}
+
+/* Main Navigation */
+.main-nav {
+    height: 45px;
+    min-height: 40px;
+    padding: 0px;
+    margin: 0;
+}
+
+.bottom__header {
+    border-top: 1px solid #014111;
+}
+
+.main-nav .nav-link {
+    color: #fff;
+}
+
+.main-nav .nav-link:hover,
+.main-nav .nav-link.active {
+    color: #f3ea28;
+}
+
+.vi-desktop:hover {
+    color: #f3ea28;
+}
+
+/*Change languages*/
+.language-selector {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    min-width: 5px;
+    max-width: 300px;
+    margin-left: 0px;
+    min-height: 30px;
+    height: 20px;
+    width: auto;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px); /* Ban dau dich len mot chut */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-radius: 20px;
+    padding: 5px;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    background: transparent;
+    border: none;
+}
+
+.language-selector:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(0px); /* Tra ve vi tri ban dau*/
+    padding: 0px;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #fff;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0px 0px 0px;
+    color: #fff;
+}
+
+.dropdown-item img {
+    margin-right: 5px;
+}
+
+.drop-item:focus .drop-item:active {
+    background-color: transparent !important;
+    color: inherit !important;
+}
+
+/* Mobile Menu */
+@media (max-width: 991.98px) {
+    .navbar-brand img {
+        height: 50px;
+    }
+
+    .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #00260a;
+        border-top: 1px solid #014111;
+        color: #fff;
+    }
+
+    .nav-vi:hover {
+        color: #fff; /* Không đổi màu khi hover */
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+    }
+
+    .dropdown-language:hover .text-hover,
+    .dropdown-language:hover i {
+        color: #f3ea28; /* Đổi màu chữ VN */
+    }
+
+    .nav-link:hover,
+    .vi-group:hover {
+        color: #f3ea28;
+    }
+
+    .lg-action {
+        cursor: pointer;
+        gap: 0 0.8rem;
+        position: relative;
+    }
+
+    .dropdown-menu {
+        min-width: 5px;
+        max-width: 300px;
+        min-height: 30px;
+        height: 15px;
+        width: 80px;
+        margin-left: 95px;
+        display: block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px); /* Ban đầu dịch lên một chút */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-radius: 20px;
+        padding: 5px;
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+        background: transparent;
+        border: none;
+    }
+
+    .language-selector:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Trả về vị trí ban đầu */
+        padding: 0px;
+    }
+
+    .dropdown-item:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        padding: 5px 9px;
+        color: #fff;
+    }
+
+    .dropdown-item img {
+        margin-right: 5px;
+    }
+
+    .drop-item:focus .drop-item:active {
+        background-color: transparent;
+        color: inherit;
+    }
+
+    .mobile-search {
+        width: 260px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-left: 5px;
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Remove search cancel button */
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+/*---------------------*MAIN*-------------------*/
+.movie__all__infor {
+    display: flex;
+    color: #fff;
+    margin-top: 120px;
+    text-align: left;
+    padding: 0 20px 0 0px;
+}
+
+#movie__poster {
+    max-width: 100%;
+    max-height: 100%;
+    width: 480px; 
+    height: auto; 
+    margin-right: 20px;
+    border: 1px solid #fff;
+}
+
+.movie__infor {
+    max-height: 100%;
+    margin-top: 20px;
+}
+
+.movie__infor li{
+    margin-top: 20px;
+}
+
+.movie__infor .item__title{
+    margin-top: 30px;
+}
+
+.movie__infor a:link {
+    color: #fff;
+    font-size: 20px;
+}
+
+#step__date h3,
+#step__location h3,
+#step__room h3,
+#step__showtime h3,
+#step__ticket h3,
+#step__seat h3,
+#step__food h3{
+    text-align: center;
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+#step__date #date__list,
+#step__location #location__list,
+#step__room #room__list,
+#step__showtime #showtime__list {
+    justify-content: center;
+    gap: 25px;
+}
+
+#step__ticket #ticket__list,
+#step__food #food__list{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    color: #fff;
+}
+
+#step__seat #seat__list{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1100px;
+    justify-content: left;
+    gap: 35px;
+    color: #fff;
+}
+
+#step__seat h4 {
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid #fff;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+#ticket__list .ticket__card {
+    border: 1px solid #fff;
+    padding: 20px 10px 0px 10px;
+    max-width: 500px;
+    width: 300px;
+    justify-items: center;
+}
+#food__list .food__card {
+    border: 1px solid #fff;
+    padding: 0px 0px 0px 0px;
+    max-width: 500px;
+    width: 300px;
+    justify-items: center;
+}
+
+.food__card img {
+  width: 100%;                /* ảnh full theo khung thẻ */
+  height: 150px;              /* hoặc chiều cao mong muốn */
+  object-fit: cover;          /* giữ tỷ lệ ảnh, cắt ảnh nếu cần */
+  border-radius: 8px;
+}
+
+#ticket__list .ticket__type,
+#ticket__list .ticket__price,
+#food__list .food__title,
+#food__list .food__price {
+    text-align: center; /*Chinh chu ra giua*/
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#ticket__list .ticket__container,
+#food__list .food__container {
+    display: flex;
+    border: 1px solid #646564;
+    border-radius: 6px;
+    justify-content: center;
+    gap: 20px;
+    max-width: 200px;
+    max-height: 200px;
+    width: 100px;
+    height: 35px;
+    background-color: #646564;
+    color: #000;
+    text-align: center; /*Chinh chu ra giua*/
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#ticket__list .ticket__container .counter-btn,
+#food__list .food__container .counter-btn {
+    border: none;
+    background-color: #646564;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+#ticket__list .ticket__container .counter-value,
+#food__list .food__container .counter-value {
+    font-size: 20px;
+    /* text-align: center; */
+}
+
+#date__list .btn-outline-primary,
+#location__list .btn-outline-primary,
+#room__list .btn-outline-primary,
+#showtime__list .btn-outline-primary{
+    color: #f3ea28;
+    border-color: #f3ea28;
+}
+#date__list .btn-outline-primary:hover,
+#location__list .btn-outline-primary:hover,
+#room__list .btn-outline-primary:hover,
+#showtime__list .btn-outline-primary:hover {
+    background-color: #e09900;
+    border-color:#e09900;
+    color: #000;
+}
+#date__list .btn-outline-primary.active,
+#location__list .btn-outline-primary.active,
+#room__list .btn-outline-primary.active,
+#showtime__list .btn-outline-primary.active {
+    background-color: #e09900;
+    border-color:#e09900;
+    color: #000;
+}
+
+#seat__list .A,
+#seat__list .B,
+#seat__list .C,
+#seat__list .D{
+    color: #f3ea28;
+    border-color: #f3ea28;
+    max-width: 100px;
+    width: 70px;
+}
+#seat__list .E{
+    color: plum;
+    border-color: plum;
+    max-width: 100px;
+    width: 100px;
+}
+#seat__list .disabled {
+    background-color: #3c3d3c;
+    border-color: #3c3d3c;
+}
+
+#seat__list .btn:hover,
+#seat__list .btn.active {
+    background-color: #e09900;
+    border-color: #e09900;
+    color: #000;
+}
+
+#seat__list .legend__seat {
+    gap: 100px;
+    max-width: 100%;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+.legend__seat .box {
+    border: 1px solid #fff;
+    width: 35px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+button.normal,
+button.double {
+  color: white;
+}
+
+.legend__seat .normal {
+    border-color: #f3ea28;
+}
+
+button.normal {
+    border-color: #f3ea28;
+}
+
+.legend__seat .double {
+    border-color:plum;
+}
+
+button.double {
+    border-color: plum;
+}
+
+.legend__seat .selected {
+    background-color: #e09900;
+    border-color:#e09900;
+}
+.legend__seat .booked {
+    background-color: #3c3d3c;
+    border-color:#3c3d3c;
+}
+
+#payment__info {
+    justify-items: left;
+}
+#payment__info h3 {
+    text-align: left;
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+#payment__info .booking__info strong{
+    color: #fff;
+}
+#payment__info .booking__info span{
+    color: #e09900;
+}
+#payment__info .booking__info #payment-timer{
+    color: red;
+}
+#payment__info .btn {
+    background-color: #f3ea28;
+    border-color: #f3ea28;
+    color: #000;
+}
+
+/*----------------------FOOTER-----------------*/
+.footer {
+    background: linear-gradient(to right, #809903, #03822d);
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    color: #fff;
+}
+
+.first__footer {
+    padding-top: 100px;
+}
+
+.first__footer .row {
+    display: flex;
+    gap: 40px;
+}
+
+.first__footer .col__1,
+.col__2,
+.col__3,
+.col__4,
+.col__5 {
+    display: flex;
+    flex-direction: column; /*Can cac phan tu theo chieu doc*/
+    align-items: left; /*Can trai theo chieu ngang*/
+    text-align: left; /*Can text giua*/
+}
+
+.first__footer .col__2 a,
+.col__3 a, 
+.col__4 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.first__footer .col__1 .btn-book {
+    margin: 10px 0;
+    background-color: #f3ea28;
+    max-width: 200px;
+    width: 150px;
+}
+
+.first__footer .col__1 #logo {
+    height: 40px;
+    width: 120px;
+}
+
+.first__footer .col__1 .dropdown-menu {
+    margin-left: 80px;
+}
+
+.last__footer {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center;
+    font-size: 9px;
+    margin-top: 90px;
+}
+
+.last__footer ul {
+    border-top: 1px solid #fff;
+    list-style: none;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    max-width: 100%;
+    width: 90%;
+}
+

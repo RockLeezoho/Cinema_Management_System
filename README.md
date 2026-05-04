@@ -1,34 +1,34 @@
 # 🎬 Cinema Management System
 
-## Tổng Quan
+## Overview
 
-Hệ thống quản lý rạp chiếu phim toàn diện với đầy đủ chức năng từ quản lý nội dung, bán vé, đến thanh toán trực tuyến. Xây dựng với **Spring Boot 3.4.5**, **Spring Data JPA**, **PostgreSQL** và tích hợp **VnPay Payment Gateway**.
+A comprehensive movie theater management system with complete features for content management, ticket sales, and online payment. Built with **Spring Boot 3.4.5**, **Spring Data JPA**, **PostgreSQL**, and integrated with **VnPay Payment Gateway**.
 
-## ✨ Điểm Nổi Bật
+## ✨ Key Highlights
 
-- ✅ **Hệ thống Booking vé** hoàn chỉnh với real-time seat status
-- ✅ **Tích hợp VnPay** - xử lý giao dịch trực tuyến an toàn
-- ✅ **JWT Authentication** - bảo mật REST API endpoints
-- ✅ **Phân quyền User** - Admin dashboard + Customer portal riêng biệt
-- ✅ **RESTful API** - 40+ endpoints cho toàn bộ chức năng
-- ✅ **Kiến trúc 3-Layer** - API, Service, Repository (Clean Architecture)
-- ✅ **Database Schema** - 11 bảng quan hệ được thiết kế tối ưu
-- ✅ **File Upload** - Xử lý upload ảnh bộ phim, poster, avatar user
+- ✅ **Complete Ticket Booking System** with real-time seat status
+- ✅ **VnPay Integration** - safe online transaction processing
+- ✅ **JWT Authentication** - secure REST API endpoints
+- ✅ **User Roles & Permissions** - separate Admin dashboard and Customer portal
+- ✅ **RESTful API** - 40+ endpoints for all features
+- ✅ **3-Layer Architecture** - API, Service, Repository (Clean Architecture)
+- ✅ **Database Schema** - 11 optimized relational tables
+- ✅ **File Upload** - optimized handling for movie images, posters, avatars
 
-## 🎯 Chức Năng Chính
+## 🎯 Main Features
 
-**Quản Lý Hệ Thống**: Rạp chiếu, Phòng chiếu, Ghế ngồi, Bộ phim, Xuất chiếu
+**System Management**: Cinemas, Rooms, Seats, Movies, Showtimes
 
-**Quản Lý Bán Vé**: Loại vé, Hóa đơn, Booking vé, Trạng thái ghế real-time
+**Ticket Sales**: Ticket Types, Invoices, Booking, Real-time Seat Status
 
-**Thanh Toán**: Tích hợp VnPay, Phiếu giảm giá (Voucher), Hóa đơn điện tử
+**Payment**: VnPay Integration, Vouchers/Discounts, Digital Invoices
 
-**Khác**: Quản lý Concession (bắp nước), Nhà cung cấp, Người dùng, Hệ thống thông báo
+**Other**: Concession Management (snacks/beverages), Suppliers, Users, Notifications
 
-## 🛠 Công Nghệ & Công Cụ
+## 🛠 Technology Stack
 
-| Lĩnh Vực | Công Nghệ |
-|---------|-----------|
+| Category | Technology |
+|----------|-----------|
 | **Backend** | Spring Boot 3.4.5, Spring Data JPA, Spring Security, Spring HATEOAS |
 | **Database** | PostgreSQL 12+, Hibernate ORM |
 | **Security** | JWT Token, Spring Security, Password Encryption (bcrypt) |
@@ -38,7 +38,7 @@ Hệ thống quản lý rạp chiếu phim toàn diện với đầy đủ chứ
 | **Payment** | VnPay (Sandbox & Production) |
 | **Testing** | Spring Boot Test, Spring Security Test |
 
-## 📁 Cấu Trúc Dự Án
+## 📁 Project Structure
 
 ```
 src/main/java/com/javaweb/cinema/
@@ -57,42 +57,42 @@ database/
 └── create_databases.sql  # SQL Schema (11 tables)
 ```
 
-## 🔐 Bảo Mật
+## 🔐 Security
 
 - JWT Token-based Authentication & Authorization
-- Spring Security với phân quyền Role-based (Admin, Customer)
+- Spring Security with Role-based Access Control (Admin, Customer)
 - Password Encryption (bcrypt)
-- CORS Configuration cho cross-origin requests
+- CORS Configuration for cross-origin requests
 - Input Validation & XSS Prevention
-- Exception Handling toàn cầu
+- Global Exception Handling
 
-## 💾 Cơ Sở Dữ Liệu
+## 💾 Database
 
-**11 bảng chính**: users, cinemas, rooms, seats, movies, showtimes, tickets, invoices, vouchers, concessions, suppliers
+**11 main tables**: users, cinemas, rooms, seats, movies, showtimes, tickets, invoices, vouchers, concessions, suppliers
 
-**Đặc điểm**: Quan hệ 1-N/M-N tối ưu, constraint integrity, cascade delete, indexed queries
+**Features**: Optimized 1-N/M-N relationships, constraint integrity, cascade delete, indexed queries
 
-## 👥 Phân Quyền & Giao Diện
+## 👥 User Roles & Interfaces
 
-| Vai Trò | Chức Năng |
-|--------|---------|
-| **Admin** | Quản lý hoàn toàn hệ thống, rạp, phim, vé, hóa đơn, báo cáo |
-| **Customer** | Xem phim, đặt vé, thanh toán, quản lý voucher, xem hóa đơn |
+| Role | Responsibilities |
+|------|---------|
+| **Admin** | Full system management, cinemas, movies, tickets, invoices, reports |
+| **Customer** | View movies, book tickets, payment, voucher management, view invoices |
 
-## 🚀 10 Tính Năng Nổi Bật
+## 🚀 Top 10 Features
 
-1. **Real-time Seat Status** - Ghế trống/đã đặt cập nhật tức thời
-2. **VnPay Integration** - Thanh toán bảo mật, hỗ trợ sandbox & production
+1. **Real-time Seat Status** - Seat availability updates instantly
+2. **VnPay Integration** - Secure payment processing with sandbox & production support
 3. **JWT Security** - Stateless authentication, token-based API
 4. **RESTful APIs** - 40+ endpoints, fully documented
-5. **File Upload** - Upload ảnh bộ phim, poster, avatar tối ưu
-6. **Booking System** - Đặt vé trực tuyến với kiểm tra trùng lặp
-7. **Voucher System** - Tạo mã giảm giá, áp dụng linh hoạt
-8. **Invoice Management** - Hóa đơn điện tử, lưu trữ database
-9. **Search & Filter** - Tìm kiếm phim, xuất chiếu, người dùng
-10. **Error Handling** - Exception handling toàn cầu, logging chi tiết
+5. **File Upload** - Optimized image handling for movies, posters, avatars
+6. **Booking System** - Online ticket booking with duplicate detection
+7. **Voucher System** - Create discount codes with flexible application
+8. **Invoice Management** - Digital invoices, database storage
+9. **Search & Filter** - Search movies, showtimes, users
+10. **Error Handling** - Global exception handling with detailed logging
 
-## 💡 Kỹ Năng Được Áp Dụng
+## 💡 Technical Skills Applied
 
 **Backend Development**
 - Spring Framework ecosystem (Boot, Data JPA, Security, HATEOAS)
@@ -130,5 +130,5 @@ database/
 
 ---
 
-**GitHub**: [https://github.com/RockLeezoho/Cinema_Management_System]  
+**GitHub**: [https://github.com/RockLeezoho/Cinema_Management_System](https://github.com/RockLeezoho/Cinema_Management_System)  
 **Contact**: codene38@gmail.com
